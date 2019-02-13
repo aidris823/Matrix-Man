@@ -12,7 +12,40 @@ import math
 #print the matrix such that it looks like
 #the template in the top comment
 def print_matrix( matrix ):
-    pass
+    '''example matrix:
+Input:
+    [[1,2,3,1][4,5,6,1][5,10,12,1]]=
+Output:
+[
+1 4 5 
+2 5 10
+3 6 12
+1 1 1
+]
+'''
+    print '[\n'
+    col1 = ''
+    col2 = ''
+    col3 = ''
+    col4 = ''
+    for i in range(len(matrix)):
+        col1 += str(matrix[i][0]) + " "
+    print col1 + '\n' 
+    for i in range(len(matrix)):
+        col2 += str(matrix[i][1]) + " "
+    print col2 + '\n'
+    for i in range(len(matrix)):
+        col3 += str(matrix[i][2]) + " " 
+    print col3 + '\n'
+    for i in range(len(matrix)):
+        col4 += str(matrix[i][3]) + " " 
+    print col4 + '\n]'
+example_matrix = [[1,2,3,1],[4,5,6,1],[5,10,12,1]]
+print_matrix(example_matrix)
+
+
+
+
 
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
@@ -33,4 +66,4 @@ def new_matrix(rows = 4, cols = 4):
         m.append( [] )
         for r in range( rows ):
             m[c].append( 0 )
-return m
+    return m
