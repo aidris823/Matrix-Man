@@ -43,7 +43,9 @@ Output:
 example_matrix = [[1,2,3,1],[4,5,6,1],[5,10,12,1]]
 print_matrix(example_matrix)
 
-
+x = list([[],[],[],[],[],[]])
+x[4] = "hello"
+print x
 
 
 
@@ -55,7 +57,20 @@ def ident( matrix ):
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
 def matrix_mult( m1, m2 ):
-    pass
+    '''                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            
+    Ex: [[
+    '''
+    rows = len(m1)
+    cols = len(m2[0])
+
+    if (len(m1[0]) != len(m2)):
+        print "Invalid multiplication"
+        return
+    i = 0
+    ans = list()
+    for i in range(rows):
+        
+    
 
 
 
