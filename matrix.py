@@ -45,14 +45,27 @@ print_matrix(example_matrix)
 
 x = list([[],[],[],[],[],[]])
 x[4] = "hello"
-print x
+#print x
 
 
 
 #turn the paramter matrix into an identity matrix
 #you may assume matrix is square
 def ident( matrix ):
-    pass
+    length = len(matrix)
+    for i in range(length):
+        for j in range(length):
+            if i == j:
+                matrix[i][j] = 1
+            else:
+                matrix[i][j] = 0
+    return matrix
+
+ex = [[10,20,30,40],[90,100,110,120],[130,150,170,190],[200,210,220,230]]
+print_matrix(ex)
+ident(ex)
+print_matrix(ex)
+
 
 #multiply m1 by m2, modifying m2 to be the product
 #m1 * m2 -> m2
@@ -65,12 +78,8 @@ def matrix_mult( m1, m2 ):
 
     if (len(m1[0]) != len(m2)):
         print "Invalid multiplication"
-        return
-    i = 0
-    ans = list()
-    for i in range(rows):
-        
-    
+        return -1
+    return 0
 
 
 
