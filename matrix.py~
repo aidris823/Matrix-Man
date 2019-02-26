@@ -62,9 +62,9 @@ def ident( matrix ):
     return matrix
 
 ex = [[10,20,30,40],[90,100,110,120],[130,150,170,190],[200,210,220,230]]
-#print_matrix(ex)
-#ident(ex)
-#print_matrix(ex)
+print_matrix(ex)
+ident(ex)
+print_matrix(ex)
 
 
 #multiply m1 by m2, modifying m2 to be the product
@@ -79,14 +79,7 @@ def matrix_mult( m1, m2 ):
     if (len(m1[0]) != len(m2)):
         print "Invalid multiplication"
         return -1
-    for i in range(len(m2)):
-        ans = list()
-        for j in range(4):
-            element = 0
-            for k in range(4):
-                element += (m2[i][k] * m1[k][i])
-            ans.append(element)
-        m2[i] = ans
+    return 0
 
 
 
